@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+	<meta content="utf-8" http-equiv="encoding">
+<script type="text/javascript">
+	//Creating variables
+	var numbersEntered, num, oddNumCounter, evenNumCounter, arrayLength;
+	const valuesArray = []; 
+	oddNumCounter = evenNumCounter = 0; 
+	//Asking user how many numbers they would like entered
+	numbersEntered = prompt("How many numbers must be entered");
+
+	for (var i = 1; i <= numbersEntered; i++ ){
+		num = prompt("Enter value " + i);
+		//Adds user value into array
+		valuesArray.push(i);
+	}
+
+	arrayLength	= valuesArray.length; 
+
+	//for loop goes through values in array
+	for (var i = 0; i < arrayLength; i++){
+		//if number has a remainder == 0 it is even,
+		//if not then it is odd
+		if (i % 2 == 0){
+			evenNumCounter++; //increments counter of even number
+		}
+		else {
+			oddNumCounter++; //increments counter of odd number
+		}
+	}
+	console.log("The number of odd numbers in the series: " + oddNumCounter);
+    console.log("The number of even numbers in the series: " + evenNumCounter);
+</script>
+</head>
+<body>	
+</body>	
+</html>	
